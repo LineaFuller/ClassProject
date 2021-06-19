@@ -1,0 +1,36 @@
+body {
+    font-family: 'Quicksand', sans-serif;
+}
+
+.page-footer {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.row {
+    margin-bottom: 0px;
+}
+
+h1 {
+    margin: 0;
+}
+
+.aboutSection {
+    margin-top: 1.5rem;
+    margin-bottom: 7rem;
+}
+
+.products  {
+    margin-top: 3rem;
+}
+
+.item {
+    margin-bottom: 2rem;
+    border: solid 1px white;
+    border-radius: 25px;
+    box-shadow: 2px;
+}
+
+.row .col {
+    padding: 2rem;
+}
