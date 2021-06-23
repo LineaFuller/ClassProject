@@ -22,6 +22,7 @@ h1 {
 
 .products  {
     margin-top: 3rem;
+
 }
 
 .item {
@@ -35,3 +36,7 @@ h1 {
     padding: 2rem;
 }
 
+.giveImg {
+    height: 5rem;
+    width: 6rem;
+}

@@ -13,6 +13,43 @@ const weatherSrc = [
     "./image stock/Clouds.jpeg",
 ];
 
+const summerOils = [
+    'Clary Sage',
+    'Rosemary',
+    'Rose',
+    'Lavender',
+    'Ylang Ylang',
+    'Grapefruit',
+    'Cedarwood',
+    'Peppermint',
+];
+
+const winterOils = [
+    'Clary Sage',
+    'Rosemary',
+    'Rose',
+    'Lavender',
+    'Ylang Ylang',
+    'Grapefruit',
+    'Cedarwood',
+    'Peppermint',
+];
+
+
+const rainOils = [
+    'Tropical Coconut',
+    'Mystic Mango',
+    'Sweet Rose',
+    'Lush Lavender',
+    'Bright Ylang Ylang',
+    'Grapefruit',
+    'Gardenia',
+    'Peppermint',
+];
+
+
+const index = Math.floor(Math.random() * 8);
+
 function success(data){
     console.log(data); 
     
@@ -35,19 +72,19 @@ function success(data){
             console.log(weatherSrc[1]);
     
             icon.innerText = 'brightness_5';
-    parallaxText.innerText = 'Looks like a beautiful day! You should check out our Honey Lavender Essential Oil!'
+    parallaxText.innerText = `Looks like a beautiful day! You should check out our ${summerOils[index]} creation!`
             weatherImg.setAttribute('src', weatherSrc[1]);
     
         }  else if (data.weather[0].main === "Snow") {
             console.log(weatherSrc[3]);
             icon.innerText = 'ac_unit';
-            parallaxText.innerText = 'Brrr! On a chilly day like today... you should treat yourself to Susans Seasonal Chamomile Essential oil!';
+            parallaxText.innerText = `Brrr! On a chilly day like today... you should treat yourself to our ${winterOils[index]} mixture! Warmth you can sense!`;
             weatherImg.setAttribute('src', weatherSrc[3]);
         }  
         else if (data.weather[0].main === "Rain" || data.weather[0].main === "Drizzle") {
             console.log(weatherSrc[2]);
             icon.innerText = 'more_vert';
-            parallaxText.innerText = 'Do not let the rain keep you down! Try our sweet Coconut and Gardenia mixture to escape to a sunny tropical Island!'
+            parallaxText.innerText = `Do not let the rain keep you down! Try our ${rainOils[index]} mixture to escape to a sunny tropical Island!`
             weatherImg.setAttribute('src', weatherSrc[2]);
         } else{
             weatherImg.setAttribute('src', weatherSrc[0]);
